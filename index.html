@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Home</title>
+    <title>JWT Testing</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <!--
@@ -9,7 +9,7 @@
       Remove all code in `styles.css`!
     -->
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <script type="module" src="frontend.js"></script>
   </head>
   <body>
     <nav>
@@ -17,7 +17,38 @@
       <a href="/page2.html">Other page</a>
     </nav>
     <main>
-      <h1>Home page</h1>
+      <h1>JWT Testing Page</h1>
+      <div class="container">
+        <div class="jwt-section">
+          <h2>Generate JWT</h2>
+          <div class="input-group">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" value="123" />
+          </div>
+          <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" value="testuser" />
+          </div>
+          <button id="generateBtn">Generate Token</button>
+          <div class="result">
+            <h3>Generated Token:</h3>
+            <pre id="tokenOutput"></pre>
+          </div>
+        </div>
+        
+        <div class="jwt-section">
+          <h2>Verify JWT</h2>
+          <div class="input-group">
+            <label for="tokenInput">Token:</label>
+            <textarea id="tokenInput" rows="4"></textarea>
+          </div>
+          <button id="verifyBtn">Verify Token</button>
+          <div class="result">
+            <h3>Decoded Token:</h3>
+            <pre id="decodedOutput"></pre>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

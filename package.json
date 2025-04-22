@@ -1,8 +1,15 @@
 {
+  "name": "jwt-demo",
+  "version": "1.0.0",
+  "description": "JWT implementation with expiry",
+  "main": "script.js",
   "scripts": {
-    "start": "servor --reload"
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "servor": "^4.0.2"
-  }
+    "dotenv": "^16.5.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "type": "module"
 }
